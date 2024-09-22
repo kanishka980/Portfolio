@@ -1,0 +1,91 @@
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#work {
+    padding: 50px 0;
+    background-color: #040404;
+    text-align: center;
+}
+
+.experience-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+}
+
+.experience-item {
+    background-color: rgba(255, 243, 217, 255);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    margin-left: 15%;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: rgba(255, 243, 217, 255);
+    z-index: 1;
+}
+
+.experience-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid rgba(255, 243, 217, 255);
+    z-index: 1;
+}
+
+.experience-item:hover {
+    transform: translateY(10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: rgba(30, 40, 51, 255);
+}
+
+.experience-item p {
+    margin: 5px 0;
+    color: rgba(252, 175, 62, 255);
+}
+
+.experience-item p:last-child {
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .experience-container {
+        align-items: center;
+    }
+    .experience-item {
+        width: 80%;
+        text-align: center;
+    }
+}
