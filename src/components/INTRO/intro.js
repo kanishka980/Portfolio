@@ -5,12 +5,7 @@ import hire from '../../assets/resume.png'
 
 
 const Intro=()=>{
-    const handleHireClick = () => {
-        const contactSection = document.getElementById('cont'); 
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+   
     
     
     
