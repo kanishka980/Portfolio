@@ -1,8 +1,8 @@
 import React from 'react';
 import './contact.css';
 import github from "../../assets/git.png";
-import linkedin from "../../assets/linkedin.jpg";
-import gmail from "../../assets/gmail.avif";
+import linkedin from "../../assets/linkedin.png";
+import gmail from "../../assets/gmail.jpg";
 import emailjs from 'emailjs-com';
 import  { useRef } from 'react';
 
