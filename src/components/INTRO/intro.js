@@ -1,29 +1,63 @@
-
-import bg from '../../assets/about.webp';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import bg from '../../assets/new_ng2.png';
 import './intro.css';
-import hire from '../../assets/resume.png'
 
+const Intro = () => {
+    const [scrollY, setScrollY] = useState(0);
 
-const Intro=()=>{
-   
     
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     
-    
+    const scaleValue = Math.max(1 - scrollY / 1000, 0.7); 
+
     return (
         <section id="home">
-            <div className="introcontent">
-                <span className="hello">Hello,</span>
-                <span className="introtext"> I'm <span className="name">Kanishka</span></span> <br></br> <span className="profession">Data Scientist / Software Developer.</span>
-                <p className="introduction">As a B.Tech student specializing in AI and Data Science, I am committed to creating innovative AI solutions for real-world challenges. I aim to continually enhance my expertise in machine learning and collaborate on pioneering projects that push the boundaries of technology.</p>
-                <button className="button" onClick={() => window.open('kanishka_resume.pdf', '_blank')}> <img src={hire} className="hire" alt="Resume Button" /></button>
-
-            </div>
-            <div>
+            <motion.div
+                className="introcontent"
+                style={{ scale: scaleValue }}
+                animate={{ opacity: scrollY > 300 ? 0.5 : 1 }} 
+                transition={{ duration: 0.5 }}
+                
+            >
+                <motion.span className="hello">
+                    Hello,
+                </motion.span>
+                <motion.span className="introtext">
+                    I'm <span className="name">Kanishka</span>
+                </motion.span>
+                <motion.span className="profession">
+                    Data Scientist / Software Developer.
+                </motion.span>
+                <motion.p className="introduction">
+                    "From data to insights, from code to impact"
+                </motion.p>
+                <motion.button
+                    className="button"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => window.open('Kanishka-sharma.pdf', '_blank')}
+                >
+                    Resume
+                </motion.button>
+            </motion.div>
+            <motion.div
+                className="contentback-wrapper"
+                style={{ scale: scaleValue }} 
+                transition={{ duration: 0.7 }}
+            >
                 <img src={bg} alt="background" className="contentback" />
-            </div>
+            </motion.div>
         </section>
+    );
+};
 
-    
-    )
-}
 export default Intro;

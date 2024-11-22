@@ -1,13 +1,32 @@
 #about {
     padding: 50px 0;
-    background-color: #040404;
+    position: relative;
     text-align: center;
+    background-image: url('C:\Users\bhavy\portfolio\src\assets\back.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: #f2eded;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .container {
@@ -15,6 +34,9 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .image-container {
@@ -28,8 +50,8 @@
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    border: 3px solid #f2eded;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #020857;
+    box-shadow: 0 0 50px rgba(3, 34, 161, 0.5);
 }
 
 .education-container {
@@ -42,15 +64,22 @@
 }
 
 .qualification-item {
-    background-color: rgba(255, 243, 217, 255);
+    background-color: rgba(2, 33, 84, 0.833);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(238, 237, 237, 0.1);
     text-align: center;
     width: 85%;
     font-size: 1rem;
     transition: transform 0.3s ease-in-out;
     position: relative;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 3s ease-out;
+}
+
+.qualification-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .qualification-item::before {
@@ -61,7 +90,7 @@
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
-    background-color: rgba(255, 243, 217, 255);
+    background-color: rgb(90, 131, 166);
     z-index: 1;
 }
 
@@ -88,18 +117,34 @@
 }
 
 .qualification-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 8px;
-    color: rgba(30, 40, 51, 255);
+    color: aliceblue;
 }
 
 .qualification-item p {
     margin: 5px 0;
-    color: rgba(252, 175, 62, 255);
+    color: rgb(149, 194, 234);
+    font-size: 1.3rem
 }
 
 .qualification-item p:last-child {
-    color: #777;
+    color: #99d11f;
+}
+
+.qualification-item {
+    opacity: 0;
+    /* Start invisible */
+    transform: translateY(20px);
+    /* Start slightly lower */
+    transition: opacity 0.8 ease-out, transform 2s ease-out;
+}
+
+.qualification-item.visible {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Move to original position */
 }
 
 @media (max-width: 768px) {

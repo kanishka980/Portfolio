@@ -6,9 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     background-color: rgba(16, 16, 16, 255);
-    margin-top: 0.5%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -34,9 +36,9 @@
 }
 
 .menu a:hover {
-    color: rgba(254, 176, 24, 255);
+    color: rgb(104, 151, 193);
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgba(254, 176, 24, 255);
+    border-bottom: 3px solid rgb(3, 63, 117);
 }
 
 .contact-button {
@@ -69,25 +71,29 @@
 
 @media screen and (max-width: 768px) {
     .navbar {
+        flex-direction: row;
         padding: 0.5rem 1rem;
+        align-items: center;
     }
     .logo {
         height: 50px;
         width: 70px;
-        margin-left: 0%;
+        margin-left: -3%;
     }
     .menu {
-        gap: 5px;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 3px;
         margin: 0;
     }
     .menu a {
-        padding: 8px;
-        font-size: 0.9rem;
+        padding: 5px;
+        font-size: 0.6rem;
     }
     .contact-button {
         width: 30px;
         height: 30px;
-        margin-left: 0.5rem;
+        margin-left: 1rem;
     }
     .contacts {
         height: 25px;

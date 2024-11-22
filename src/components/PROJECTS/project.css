@@ -19,8 +19,8 @@ h2 {
 
 .project-item {
     width: 30%;
-    background-color: rgba(255, 243, 217, 255);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(2, 34, 64);
+    box-shadow: 0 10px 10px rgba(141, 188, 233, 0.1);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -42,13 +42,13 @@ h2 {
     text-align: center;
     margin-top: 10px;
     font-size: 10px;
-    color: #050505;
+    color: #fdfcfc;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .clicktext:hover {
-    color: #050505;
+    color: #8bc4ee;
 }
 
 .project-image:hover {
@@ -62,13 +62,13 @@ h2 {
 .project-details h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #333;
+    color: #0aec1d;
     text-decoration: underline;
 }
 
 .project-details p {
     font-size: 16px;
-    color: #555;
+    color: aliceblue;
     line-height: 1.6;
 }
 

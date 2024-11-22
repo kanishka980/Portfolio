@@ -1,8 +1,8 @@
 import React from 'react';
 import './project.css'; 
-import project1Image from '../../assets/skin.webp'; 
-import project2Image from '../../assets/twitter.jpg'; 
-import project3Image from '../../assets/power_bi.webp'; 
+import project1Image from '../../assets/skin.png'; 
+import project2Image from '../../assets/tweets.png';
+import project3Image from '../../assets/pbi.png'; 
 
 const projectsData = [
     {

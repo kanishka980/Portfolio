@@ -1,6 +1,7 @@
 #home {
     height: calc(100vh - 4rem);
     width: 100vw;
+    height: 100vh;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
@@ -24,10 +25,12 @@
 }
 
 .contentback {
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     border-radius: 50%;
     flex: 4;
+    border: 5px solid rgb(3, 47, 85);
+    box-shadow: 0 0 80px rgba(3, 34, 161, 0.5);
 }
 
 .introcontent {
@@ -44,8 +47,9 @@
 }
 
 .name {
-    color: rgb(131, 88, 6);
+    color: rgb(2, 61, 113);
     font-size: 4rem;
+    text-shadow: 0 0 10px rgb(2, 61, 113);
 }
 
 .introtext {
@@ -65,46 +69,32 @@
     color: aliceblue;
     margin-top: 20px;
     line-height: 1.6;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    margin-left: 30px;
     font-style: italic;
 }
 
 .button {
-    background-color: #f1f1ef;
-    color: black;
-    text-decoration: double;
-    border: none;
-    padding: 12px;
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 10px 20px;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-left: 40%;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 37%;
+    margin-top: 10%;
+    border-radius: 5%;
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 1.5s;
 }
 
 .button:hover {
-    background-color: #bbd9f9;
+    background-color: #f1f3f6;
     transform: scale(1.1);
-}
-
-.button img.hire {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: 2%;
-}
-
-.button img.hire {
-    width: 70px;
-    height: 70px;
-    margin-left: 20%;
-    border-radius: 30%;
-    margin-left: 2%;
+    color: rgb(8, 8, 8);
+    border: 2px solid rgb(131, 88, 6);
 }
 
 @media screen and (max-width: 768px) {
@@ -112,6 +102,7 @@
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
+        height: 100vh;
     }
     .introcontent {
         order: 1;
@@ -124,15 +115,15 @@
         order: 2;
         height: 300px;
         width: 300px;
-        margin-top: 20px;
+        margin-top: 80px;
     }
     .hello,
     .name,
     .introtext {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .profession {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -142,13 +133,9 @@
         margin-bottom: 10px;
     }
     .button {
-        margin-left: 0;
+        margin-left: 38%;
         margin-top: 20px;
-        width: 80px;
-        height: 80px;
-    }
-    .button img.hire {
-        width: 50px;
+        width: 100px;
         height: 50px;
     }
 }

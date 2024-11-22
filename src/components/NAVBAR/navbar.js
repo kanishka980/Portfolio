@@ -1,6 +1,6 @@
 import React from "react";
 import "./navbar.css";
-import logo from '../../assets/portlogo.avif';
+import logo from '../../assets/logo.png';
 import contactlogo from '../../assets/contact.webp';
 
 
